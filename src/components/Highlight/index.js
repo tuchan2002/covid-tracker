@@ -6,17 +6,17 @@ const Highlight = ({ report }) => {
   console.log(data);
   const summary = [
     {
-      title: "So ca nhiem",
+      title: "Infected",
       count: data.Confirmed,
       type: "confimed",
     },
     {
-      title: "So ca khoi",
+      title: "Recovered",
       count: data.Recovered,
       type: "recovered",
     },
     {
-      title: "So ca tu vong",
+      title: "Deaths",
       count: data.Deaths,
       type: "death",
     },

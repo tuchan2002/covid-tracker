@@ -10,7 +10,7 @@ const generateOptions = (data) => {
       height: 500,
     },
     title: {
-      text: "Tong ca nhiem",
+      text: null,
     },
     xAxis: {
       categories,
@@ -40,7 +40,7 @@ const generateOptions = (data) => {
     },
     series: [
       {
-        name: "Tong Ca Nhiem",
+        name: "Infected",
         data: data.map((item) => item.Confirmed),
       },
     ],
@@ -69,30 +69,30 @@ const LineChart = ({ data }) => {
   }, [data, reportType]);
   return (
     <div>
-      <div>
+      <div className="flex justify-center mb-2">
         <button
-          className={`uppercase border-2 p-1 rounded-l-md ${
+          className={`uppercase border-2 py-1 px-2 rounded-l-md ${
             reportType === "all" ? "border-red-500 text-red-500" : ""
           }`}
           onClick={() => setReportType("all")}
         >
-          Tat ca
+          ALL
         </button>
         <button
-          className={`uppercase border-2 p-1 ${
+          className={`uppercase border-2 py-1 px-2 ${
             reportType === "30" ? "border-red-500 text-red-500" : ""
           }`}
           onClick={() => setReportType("30")}
         >
-          30 ngay
+          30 days
         </button>
         <button
-          className={`uppercase border-2 p-1 rounded-r-md ${
+          className={`uppercase border-2 py-1 px-2 rounded-r-md ${
             reportType === "7" ? "border-red-500 text-red-500" : ""
           }`}
           onClick={() => setReportType("7")}
         >
-          7 ngay
+          7 days
         </button>
       </div>
       <HighchartsReact highcharts={Highcharts} options={options} />

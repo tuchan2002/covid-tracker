@@ -2,9 +2,9 @@ import React from "react";
 import CountUp from "react-countup";
 
 const makeBorderStyles = (type) => {
-  if (type === "confimed") return "border-red-500";
-  else if (type === "recovered") return "border-green-500";
-  else return "border-gray-500";
+  if (type === "confimed") return "border-red-400";
+  else if (type === "recovered") return "border-green-400";
+  else return "border-gray-400";
 };
 const HighlightCard = ({ title, count, type }) => {
   return (

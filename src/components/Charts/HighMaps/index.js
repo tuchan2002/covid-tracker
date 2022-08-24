@@ -34,7 +34,7 @@ const initOptions = {
   },
   series: [
     {
-      name: "Dan so",
+      name: "Population",
       joinBy: ["hc-key", "key"],
     },
   ],

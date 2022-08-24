@@ -13,7 +13,7 @@ const Summary = ({ report, selectedCountryId }) => {
   }, [selectedCountryId]);
 
   return (
-    <div className="grid grid-cols-3 gap-5 mt-5">
+    <div className="grid grid-cols-3 gap-5 mt-8">
       <div className="col-span-2">
         <LineChart data={report} />
       </div>

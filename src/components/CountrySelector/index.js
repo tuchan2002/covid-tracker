@@ -3,7 +3,7 @@ import React from "react";
 const CountrySelector = ({ value, handleOnChange, countries }) => {
   return (
     <div>
-      <h3>Quoc Gia:</h3>
+      <h3>Country:</h3>
       <select
         className="bg-transparent border-b-2 outline-none"
         name="country-selector"

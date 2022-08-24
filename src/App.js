@@ -1,3 +1,4 @@
+import { sortBy } from "lodash";
 import { useEffect, useState } from "react";
 import { getContries, getReportByCountry } from "./api";
 import CountrySelector from "./components/CountrySelector";
@@ -11,10 +12,11 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await getContries();
-      setContries(data);
+      const countries = sortBy(data, "Country");
+      setContries(countries);
     };
     fetchData();
-    setSelectedCountryId("vn");
+    setSelectedCountryId("jp");
   }, []);
 
   useEffect(() => {
@@ -34,8 +36,10 @@ function App() {
   const handleOnChange = async (e) => {
     setSelectedCountryId(e.target.value);
   };
+
+  console.log(countries);
   return (
-    <div className="p-3">
+    <div className="pt-3 px-5">
       <CountrySelector
         handleOnChange={handleOnChange}
         countries={countries}
